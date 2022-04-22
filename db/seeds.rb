@@ -8,13 +8,17 @@
 
 #Create a main sample user
 User.create!(name: "Stas", email: "stas@stas.com",
-             password: "qwerty", password_confirmation: "qwerty", 
-             admin: true)
+             password:     "qwerty", password_confirmation: "qwerty", 
+             admin:        true, 
+             activated:    true, 
+             activated_at: Time.zone.now)
 
 #Generate a bunch of additional users
 99.times do |n|
   name = Faker::Name.name
   email = "user_#{n + 1}@example.com"
   password = "qwerty"
-  User.create(name: name, email: email, password: password, password_confirmation: password)
+  User.create(name: name, email: email, password: password, password_confirmation: password, 
+              activated:    true, 
+              activated_at: Time.zone.now)
 end
