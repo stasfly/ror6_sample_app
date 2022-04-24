@@ -4,5 +4,7 @@
 <p>
   Welcome to the Sample App! Click on the link below to activate your account:
 </p>
-<<%= link_to "Activate", edit_account_activation_url(@user.activation_token, email: @user.email) %>>
+<<%= link_to "Activate", edit_account_activation_url(@user.activation_token, 
+                                                      email: @user.email) %>>
 
+<%#127.0.0.1:3000/account_activations/Wv0SzcgNLW-8nfj5-Hgy1g/edit?email=w%40w.com %>
