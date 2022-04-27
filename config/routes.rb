@@ -17,6 +17,7 @@ Rails.application.routes.draw do
             #create            password_resets_path
             #edit         edit_password_reset_url(token)
             #update            password_reset_path(token)
+  resources :microposts, only: [:create, :destroy] 
   
 
   

@@ -15,6 +15,9 @@ gem 'bootsnap',       '1.7.2', require: false
 gem 'faker'
 gem 'will_paginate'
 gem 'bootstrap-will_paginate'
+gem 'active_storage_validations'
+gem 'image_processing'
+gem 'mini_magick'
 
 group :development, :test do
   gem 'sqlite3', '1.4.2'

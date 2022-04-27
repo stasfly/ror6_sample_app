@@ -22,3 +22,10 @@ User.create!(name: "Stas", email: "stas@stas.com",
               activated:    true, 
               activated_at: Time.zone.now)
 end
+
+users = User.order(:created_at).take(6) # or     .limit(6)
+50.times do 
+  content = Faker::Lorem.sentence(word_count: 5)
+  users.each { |u| u.microposts.create!(content: content) }
+end
+
